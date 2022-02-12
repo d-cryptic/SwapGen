@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import MovieCard from "../Movie/MovieCard";
+import MovieDatas from "../Movie/movieData";
 
-const movie = ({ movieData }) => {
-  console.log(movieData);
+const Movie = () => {
   return (
     <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-10 mx-10 my-10">
-      {movieData.map((movie) => {
+      {MovieDatas.map((movie) => {
         return (
           <MovieCard
             image={movie.posterURL}
@@ -17,6 +17,15 @@ const movie = ({ movieData }) => {
         );
       })}
     </div>
+  );
+};
+
+const movie = () => {
+  // console.log(movieData);
+  return (
+    <>
+      <Movie />
+    </>
   );
 };
 

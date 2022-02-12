@@ -5,19 +5,39 @@ import MovieDatas from "./Movie/movieData";
 const Filter = () => {
   const [genre, setGenre] = useState("All");
 
-  const handleChange = (e) => {
-    setGenre(e.target.value);
-    console.log(e);
-  };
+  // const handleChange = (e) => {
+  //   setGenre(e.target.value);
+  //   switch (e.target.value) {
+  //     case "All":
+  //       <Movie movieData={MovieDatas} />;
+  //     case "Action":
+  //       <Movie
+  //         movieData={MovieDatas.filter((movie) => movie.genre === "Action")}
+  //       />;
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
+  //     case "Comedy":
+  //       <Movie
+  //         movieData={MovieDatas.filter((movie) => movie.genre === "Comedy")}
+  //       />;
+  //     case "Drama":
+  //       <Movie
+  //         movieData={MovieDatas.filter((movie) => movie.genre === "Drama")}
+  //       />;
+  //     case "Horror":
+  //       <Movie
+  //         movieData={MovieDatas.filtser((movie) => movie.genre === "Horror")}
+  //       />;
+  //     case "Romance":
+  //       <Movie
+  //         movieData={MovieDatas.filter((movie) => movie.genre === "Romance")}
+  //       />;
+  //   }
+  // };
 
   return (
     <div className="my-10 justify-center flex flex-wra">
       <div class="sm:items-center sm:flex sm:justify-between">
-        <form action="" class="flex mt-2 sm:mt-0 onSubmit={handleSubmit}">
+        <form action="" class="flex mt-2 sm:mt-0">
           <div>
             <label for="FilterBy" class="sr-only">
               Filter
@@ -26,7 +46,8 @@ const Filter = () => {
               id="FilterBy"
               name="filter_by"
               class="text-sm border-black-100 rounded"
-              onChange={handleChange}>
+              // onChange={ handleChange }
+            >
               <option readonly>All</option>
               <option value="drama">Drama</option>
               <option value="romance">Romance</option>

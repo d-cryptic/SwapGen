@@ -1,7 +1,9 @@
 import React from "react";
 import Modal from "../Modal";
 
-const EmojiCard = () => {
+const EmojiCard = ({ image: emoji, meaning, emotion }) => {
+  console.log(emoji);
+  let context = meaning + "\n" + emotion;
   return (
     <div>
       <div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
@@ -43,10 +45,10 @@ const EmojiCard = () => {
         <div class="flex flex-col items-center pb-10">
           <img
             class="mb-3 w-24 h-24 rounded-full shadow-lg"
-            src="/docs/images/people/profile-picture-3.jpg"
+            src={emoji}
             alt="Bonnie image"
           />
-          <Modal />
+          <Modal content={meaning} />
         </div>
       </div>
     </div>

@@ -48,7 +48,7 @@ const Tabs = ({ color }) => {
                 data-toggle="tab"
                 href="#link2"
                 role="tablist">
-                <i className="fas fa-cog text-base mr-1"></i> Slang Words
+                <i className="fas fa-cog text-base mr-1"></i> Emojis
               </a>
             </li>
             <li className="-mb-px mr-2 last:mr-0 flex-auto text-center my-3">
@@ -66,7 +66,7 @@ const Tabs = ({ color }) => {
                 data-toggle="tab"
                 href="#link3"
                 role="tablist">
-                <i className="fas fa-briefcase text-base mr-1"></i> Emojis
+                <i className="fas fa-briefcase text-base mr-1"></i> Slang Words
               </a>
             </li>
             <li className="-mb-px mr-2 last:mr-0 flex-auto text-center my-3">
@@ -153,7 +153,7 @@ const Tabs = ({ color }) => {
                     without functional solutions.
                   </p>
                   <Filter />
-                  {/* <Movie /> */}
+                  <Movie />
                 </div>
                 <div className={openTab === 5 ? "block" : "hidden"} id="link5">
                   <p>
