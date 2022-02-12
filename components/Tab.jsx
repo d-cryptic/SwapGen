@@ -1,5 +1,5 @@
 import React from "react";
-import Abbreviation from "./Grids/abbreviation";
+import Abbreviation from "./Grids/Abbreviation";
 import Emojis from "./Grids/Emoji";
 import Memes from "./Grids/Memes";
 import Movie from "./Grids/Movie";
