@@ -15,13 +15,13 @@ const Tabs = ({ color }) => {
           <ul
             className="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row "
             role="tablist">
-            <li className="-mb-px mr-2 last:mr-0 flex-auto text-center my-3">
+            <li className="-mb-px mr-2  last:mr-0 flex-auto text-center my-3">
               <a
                 className={
                   "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
                   (openTab === 1
-                    ? "text-white bg-" + color + "-600"
-                    : "text-" + color + "-600 bg-white")
+                    ? "text-black bg-yellow-400"
+                    : "text-black bg-blue-50")
                 }
                 onClick={(e) => {
                   e.preventDefault();
@@ -38,8 +38,8 @@ const Tabs = ({ color }) => {
                 className={
                   "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
                   (openTab === 2
-                    ? "text-white bg-" + color + "-600"
-                    : "text-" + color + "-600 bg-white")
+                    ? "text-black bg-yellow-400"
+                    : "text-black bg-blue-50")
                 }
                 onClick={(e) => {
                   e.preventDefault();
@@ -56,8 +56,8 @@ const Tabs = ({ color }) => {
                 className={
                   "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
                   (openTab === 3
-                    ? "text-white bg-" + color + "-600"
-                    : "text-" + color + "-600 bg-white")
+                    ? "text-black bg-yellow-400"
+                    : "text-black bg-blue-50")
                 }
                 onClick={(e) => {
                   e.preventDefault();
@@ -74,8 +74,8 @@ const Tabs = ({ color }) => {
                 className={
                   "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
                   (openTab === 4
-                    ? "text-white bg-" + color + "-600"
-                    : "text-" + color + "-600 bg-white")
+                    ? "text-black bg-yellow-400"
+                    : "text-black bg-blue-50")
                 }
                 onClick={(e) => {
                   e.preventDefault();
@@ -84,7 +84,7 @@ const Tabs = ({ color }) => {
                 data-toggle="tab"
                 href="#link4"
                 role="tablist">
-                <i className="fas fa-briefcase text-base mr-1"></i> Emojis
+                <i className="fas fa-briefcase text-base mr-1"></i> Web Series
               </a>
             </li>
             <li className="-mb-px mr-2 last:mr-0 flex-auto text-center my-3">
@@ -92,8 +92,8 @@ const Tabs = ({ color }) => {
                 className={
                   "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
                   (openTab === 5
-                    ? "text-white bg-" + color + "-600"
-                    : "text-" + color + "-600 bg-white")
+                    ? "text-black bg-yellow-400"
+                    : "text-black bg-blue-50")
                 }
                 onClick={(e) => {
                   e.preventDefault();
@@ -153,7 +153,7 @@ const Tabs = ({ color }) => {
                     without functional solutions.
                   </p>
                   <Filter />
-                  <Movie />
+                  {/* <Movie /> */}
                 </div>
                 <div className={openTab === 5 ? "block" : "hidden"} id="link5">
                   <p>
