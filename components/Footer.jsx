@@ -6,7 +6,7 @@ export const Footer = () => {
       <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
         © 2022{" "}
         <a href="https://flowbite.com" className="hover:underline" target="#">
-          GenZ™
+          SwapGen™
         </a>
         . All Rights Reserved. Built with ❤️ by <a href="">Barun</a>,{" "}
         <a href="">Gungun</a>, <a href="">Madhur</a>, and <a href="">Sunaina</a>
