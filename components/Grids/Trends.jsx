@@ -8,6 +8,7 @@ const Emoji = () => {
       {TrendsData.map((trend) => {
         return (
           <TrendCard
+            key={trend.ID}
             title={trend.title}
             description={trend.description}
             image={trend.image}

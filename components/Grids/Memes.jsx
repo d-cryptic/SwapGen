@@ -8,6 +8,7 @@ const memes = () => {
       {MemesData.map((meme) => {
         return (
           <MemeCard
+            key={meme.ID}
             image={meme.memeURL}
             contextEnglish={meme.contextEnglish}
             contextHindi={meme.contextHindi}

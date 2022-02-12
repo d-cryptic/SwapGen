@@ -8,6 +8,7 @@ const Movie = () => {
       {MovieDatas.map((movie) => {
         return (
           <MovieCard
+            key={movie.ID}
             image={movie.posterURL}
             title={movie.title}
             IMDB={movie.IMDBRating}

@@ -36,19 +36,19 @@ const Filter = () => {
 
   return (
     <div className="my-10 justify-center flex flex-wra">
-      <div class="sm:items-center sm:flex sm:justify-between">
-        <form action="" class="flex mt-2 sm:mt-0">
+      <div className="sm:items-center sm:flex sm:justify-between">
+        <form action="" className="flex mt-2 sm:mt-0">
           <div>
-            <label for="FilterBy" class="sr-only">
+            <label for="FilterBy" className="sr-only">
               Filter
             </label>
             <select
               id="FilterBy"
               name="filter_by"
-              class="text-sm border-black-100 rounded"
+              className="text-sm border-black-100 rounded"
               // onChange={ handleChange }
             >
-              <option readonly>All</option>
+              <option readOnly>All</option>
               <option value="drama">Drama</option>
               <option value="romance">Romance</option>
               <option value="horror">Horror</option>

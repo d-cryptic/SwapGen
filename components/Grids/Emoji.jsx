@@ -9,6 +9,7 @@ const Emoji = () => {
         console.log(emoji.emoji);
         return (
           <EmojiCard
+            key={emoji.ID}
             image={emoji.emoji}
             emotion={emoji.emotion}
             meaning={emoji.meaning}
