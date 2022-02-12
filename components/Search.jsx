@@ -7,7 +7,7 @@ const Search = () => {
   console.log(word);
 
   const handleSubmit = (e) => {
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1 gap-10 mx-10 my-10">
+    <div classNameName="grid md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1 gap-10 mx-10 my-10">
       {SlangWords.filter((slang) => {
         if (word == "") {
           {
@@ -27,12 +27,12 @@ const Search = () => {
   };
 
   return (
-    <div class="flex justify-center">
-      <div class="mb-3 xl:w-96">
-        <div class="input-group relative flex flex-wrap items-stretch w-auto mb-4">
+    <div className="flex justify-center">
+      <div className="mb-3 xl:w-96">
+        <div className="input-group relative flex flex-wrap items-stretch w-auto mb-4">
           <input
             type="search"
-            class="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none my-5"
+            className="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none my-5"
             placeholder="Search"
             aria-label="Search"
             aria-describedby="button-addon3"
