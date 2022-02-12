@@ -4,7 +4,6 @@ import Image from "next/image";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Tab from "../components/Tab";
-import alanBtn from "@alan-ai/alan-sdk-web";
 
 export default function Home() {
   // useEffect(() => {
