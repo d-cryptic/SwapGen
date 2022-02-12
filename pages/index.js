@@ -4,6 +4,7 @@ import Image from "next/image";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Tab from "../components/Tab";
+import Emoji from "./emoji";
 import Memes from "./memes";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <Navbar />
       <Tab />
       <Memes />
+      <Emoji />
       <Footer />
     </div>
   );

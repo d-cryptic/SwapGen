@@ -1,5 +1,5 @@
 import React from "react";
-import MemePopUp from "./MemePopUp";
+import MemePopUp from "../Modal";
 
 const MemeCard = () => {
   return (
