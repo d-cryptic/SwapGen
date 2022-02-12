@@ -1,6 +1,5 @@
 import React from "react";
-import MemeCard from "../components/Meme/MemeCard";
-import MemePopUp from "../components/Modal";
+import MemeCard from "../Meme/MemeCard";
 
 const memes = () => {
   return (

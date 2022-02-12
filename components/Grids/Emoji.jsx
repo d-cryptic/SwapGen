@@ -1,5 +1,5 @@
 import React from "react";
-import EmojiCard from "../components/Emoji/EmojiCard";
+import EmojiCard from "../Emoji/EmojiCard";
 
 const emoji = () => {
   return (

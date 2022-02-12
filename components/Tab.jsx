@@ -1,128 +1,184 @@
 import React from "react";
+import Abbreviation from "./Grids/abbreviation";
+import Emojis from "./Grids/Emoji";
+import Memes from "./Grids/Memes";
+import Movie from "./Grids/Movie";
+import Filter from "./Filter";
+import Trends from "./Grids/Trends";
 
-const Tab = () => {
+const Tabs = ({ color }) => {
+  const [openTab, setOpenTab] = React.useState(1);
   return (
-    <div>
-      <div class="mb-4 border-b border-gray-200 dark:border-gray-700 flex flex-wrap justify-center ">
-        <ul
-          class="flex flex-wrap -mb-px"
-          id="myTab"
-          data-tabs-toggle="#myTabContent"
-          role="tablist">
-          <li class="mr-2" role="presentation">
-            <button
-              class="inline-block py-4 px-4 text-sm font-medium text-center text-gray-500 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300"
-              id="Memes-tab"
-              data-tabs-target="#Memes"
-              type="button"
-              role="tab"
-              aria-controls="Memes"
-              aria-selected="false">
-              Memes
-            </button>
-          </li>
-          <li class="mr-2" role="presentation">
-            <button
-              class="inline-block py-4 px-4 text-sm font-medium text-center text-gray-500 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300 active"
-              id="Slang Words-tab"
-              data-tabs-target="#Slang Words"
-              type="button"
-              role="tab"
-              aria-controls="Slang Words"
-              aria-selected="true">
-              Slang Words
-            </button>
-          </li>
-          <li class="mr-2" role="presentation">
-            <button
-              class="inline-block py-4 px-4 text-sm font-medium text-center text-gray-500 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300"
-              id="Emojis-tab"
-              data-tabs-target="#Emojis"
-              type="button"
-              role="tab"
-              aria-controls="Emojis"
-              aria-selected="false">
-              Emojis
-            </button>
-          </li>
-          <li role="presentation">
-            <button
-              class="inline-block py-4 px-4 text-sm font-medium text-center text-gray-500 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300"
-              id="Movies-tab"
-              data-tabs-target="#Movies"
-              type="button"
-              role="tab"
-              aria-controls="Movies"
-              aria-selected="false">
-              Movies
-            </button>
-          </li>
-        </ul>
-      </div>
-      <div id="myTabContent">
-        <div
-          class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800"
-          id="Memes"
-          role="tabpanel"
-          aria-labelledby="Memes-tab">
-          <p class="text-sm text-gray-500 dark:text-gray-400">
-            This is some placeholder content the{" "}
-            <strong class="font-medium text-gray-800 dark:text-white">
-              Memes tab's associated content
-            </strong>
-            . Clicking another tab will toggle the visibility of this one for
-            the next. The tab JavaScript swaps classes to control the content
-            visibility and styling.
-          </p>
-        </div>
-        <div
-          class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800"
-          id="Slang Words"
-          role="tabpanel"
-          aria-labelledby="Slang Words-tab">
-          <p class="text-sm text-gray-500 dark:text-gray-400">
-            This is some placeholder content the{" "}
-            <strong class="font-medium text-gray-800 dark:text-white">
-              Slang Words tab's associated content
-            </strong>
-            . Clicking another tab will toggle the visibility of this one for
-            the next. The tab JavaScript swaps classes to control the content
-            visibility and styling.
-          </p>
-        </div>
-        <div
-          class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800"
-          id="Emojis"
-          role="tabpanel"
-          aria-labelledby="Emojis-tab">
-          <p class="text-sm text-gray-500 dark:text-gray-400">
-            This is some placeholder content the{" "}
-            <strong class="font-medium text-gray-800 dark:text-white">
-              Emojis tab's associated content
-            </strong>
-            . Clicking another tab will toggle the visibility of this one for
-            the next. The tab JavaScript swaps classes to control the content
-            visibility and styling.
-          </p>
-        </div>
-        <div
-          class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800"
-          id="Movies"
-          role="tabpanel"
-          aria-labelledby="Movies-tab">
-          <p class="text-sm text-gray-500 dark:text-gray-400">
-            This is some placeholder content the{" "}
-            <strong class="font-medium text-gray-800 dark:text-white">
-              Movies tab's associated content
-            </strong>
-            . Clicking another tab will toggle the visibility of this one for
-            the next. The tab JavaScript swaps classes to control the content
-            visibility and styling.
-          </p>
+    <div className="mx-10">
+      <div className="flex flex-wrap">
+        <div className="w-full">
+          <ul
+            className="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row "
+            role="tablist">
+            <li className="-mb-px mr-2 last:mr-0 flex-auto text-center my-3">
+              <a
+                className={
+                  "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
+                  (openTab === 1
+                    ? "text-white bg-" + color + "-600"
+                    : "text-" + color + "-600 bg-white")
+                }
+                onClick={(e) => {
+                  e.preventDefault();
+                  setOpenTab(1);
+                }}
+                data-toggle="tab"
+                href="#link1"
+                role="tablist">
+                <i className="fas fa-space-shuttle text-base mr-1"></i> Memes
+              </a>
+            </li>
+            <li className="-mb-px mr-2 last:mr-0 flex-auto text-center my-3">
+              <a
+                className={
+                  "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
+                  (openTab === 2
+                    ? "text-white bg-" + color + "-600"
+                    : "text-" + color + "-600 bg-white")
+                }
+                onClick={(e) => {
+                  e.preventDefault();
+                  setOpenTab(2);
+                }}
+                data-toggle="tab"
+                href="#link2"
+                role="tablist">
+                <i className="fas fa-cog text-base mr-1"></i> Slang Words
+              </a>
+            </li>
+            <li className="-mb-px mr-2 last:mr-0 flex-auto text-center my-3">
+              <a
+                className={
+                  "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
+                  (openTab === 3
+                    ? "text-white bg-" + color + "-600"
+                    : "text-" + color + "-600 bg-white")
+                }
+                onClick={(e) => {
+                  e.preventDefault();
+                  setOpenTab(3);
+                }}
+                data-toggle="tab"
+                href="#link3"
+                role="tablist">
+                <i className="fas fa-briefcase text-base mr-1"></i> Emojis
+              </a>
+            </li>
+            <li className="-mb-px mr-2 last:mr-0 flex-auto text-center my-3">
+              <a
+                className={
+                  "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
+                  (openTab === 4
+                    ? "text-white bg-" + color + "-600"
+                    : "text-" + color + "-600 bg-white")
+                }
+                onClick={(e) => {
+                  e.preventDefault();
+                  setOpenTab(4);
+                }}
+                data-toggle="tab"
+                href="#link4"
+                role="tablist">
+                <i className="fas fa-briefcase text-base mr-1"></i> Emojis
+              </a>
+            </li>
+            <li className="-mb-px mr-2 last:mr-0 flex-auto text-center my-3">
+              <a
+                className={
+                  "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
+                  (openTab === 5
+                    ? "text-white bg-" + color + "-600"
+                    : "text-" + color + "-600 bg-white")
+                }
+                onClick={(e) => {
+                  e.preventDefault();
+                  setOpenTab(5);
+                }}
+                data-toggle="tab"
+                href="#linkt"
+                role="tablist">
+                <i className="fas fa-briefcase text-base mr-1"></i> Trends
+              </a>
+            </li>
+          </ul>
+          <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
+            <div className="px-4 py-5 flex-auto">
+              <div className="tab-content tab-space">
+                <div className={openTab === 1 ? "block" : "hidden"} id="link1">
+                  <p>
+                    Collaboratively administrate empowered markets via
+                    plug-and-play networks. Dynamically procrastinate B2C users
+                    after installed base benefits.
+                    <br />
+                    <br /> Dramatically visualize customer directed convergence
+                    without revolutionary ROI.
+                  </p>
+                  <Memes />
+                </div>
+                <div className={openTab === 2 ? "block" : "hidden"} id="link2">
+                  <p>
+                    Completely synergize resource taxing relationships via
+                    premier niche markets. Professionally cultivate one-to-one
+                    customer service with robust ideas.
+                    <br />
+                    <br />
+                    Dynamically innovate resource-leveling customer service for
+                    state of the art customer service.
+                  </p>
+                  <Emojis />
+                </div>
+                <div className={openTab === 3 ? "block" : "hidden"} id="link3">
+                  <p>
+                    Efficiently unleash cross-media information without
+                    cross-media value. Quickly maximize timely deliverables for
+                    real-time schemas.
+                    <br />
+                    <br /> Dramatically maintain clicks-and-mortar solutions
+                    without functional solutions.
+                  </p>
+                  <Abbreviation />
+                </div>
+                <div className={openTab === 4 ? "block" : "hidden"} id="link4">
+                  <p>
+                    Efficiently unleash cross-media information without
+                    cross-media value. Quickly maximize timely deliverables for
+                    real-time schemas.
+                    <br />
+                    <br /> Dramatically maintain clicks-and-mortar solutions
+                    without functional solutions.
+                  </p>
+                  <Filter />
+                  <Movie />
+                </div>
+                <div className={openTab === 5 ? "block" : "hidden"} id="link5">
+                  <p>
+                    Efficiently unleash cross-media information without
+                    cross-media value. Quickly maximize timely deliverables for
+                    real-time schemas.
+                    <br />
+                    <br /> Dramatically maintain clicks-and-mortar solutions
+                    without functional solutions.
+                  </p>
+                  <Trends />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default Tab;
+export default function TabsRender() {
+  return (
+    <div>
+      <Tabs color="pink" />
+    </div>
+  );
+}

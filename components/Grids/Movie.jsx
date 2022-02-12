@@ -1,5 +1,5 @@
 import React from "react";
-import MovieCard from "../components/Movie/MovieCard";
+import MovieCard from "../Movie/MovieCard";
 
 const movie = () => {
   return (

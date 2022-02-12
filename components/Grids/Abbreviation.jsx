@@ -1,5 +1,5 @@
 import React from "react";
-import AbbreviationCard from "../components/Abbreviation/AbbreviationCard";
+import AbbreviationCard from "../Abbreviation/AbbreviationCard";
 
 const abbreviation = () => {
   return (
