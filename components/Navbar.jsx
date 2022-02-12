@@ -11,7 +11,7 @@ const Nav = () => {
         <a href="#" className="flex">
           <Image src={logo} alt="logo" width={75} height={75} />
           <span className="self-center mx-5 font-black text-3xl whitespace-nowrap dark:text-white">
-            FlowBite
+            SwapGen
           </span>
         </a>
       </div>
