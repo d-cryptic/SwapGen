@@ -39,7 +39,7 @@ const Filter = () => {
       <div className="sm:items-center sm:flex sm:justify-between">
         <form action="" className="flex mt-2 sm:mt-0">
           <div>
-            <label for="FilterBy" className="sr-only">
+            <label htmlFor="FilterBy" className="sr-only">
               Filter
             </label>
             <select
