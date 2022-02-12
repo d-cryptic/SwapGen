@@ -4,8 +4,6 @@ import Image from "next/image";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Tab from "../components/Tab";
-// import alanBtn from "@alan-ai/alan-sdk-web";
-import dynamic from "next/dynamic";
 
 export default function Home() {
   useEffect(() => {
@@ -22,6 +20,21 @@ export default function Home() {
 
   return (
     <div>
+      <div>
+        <Head>
+          <title>My page title</title>
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;700;900&display=swap"
+            rel="stylesheet"></link>
+        </Head>
+        <p>Hello world!</p>
+      </div>
       <Navbar />
       <Tab />
       <Footer />
